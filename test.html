@@ -7,21 +7,25 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     :root {
-  --bg: #f8f9fa;
-  --card: #ffffff;
-  --text: #202124;
-  --muted: #5f6368;
-  --line: #dadce0;
-  --accent: #1a73e8;
+      --bg: #fefefe;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e0e0e0;
 
-  --def: #e6f4ea;
-  --thm: #e8f0fe;
-  --pf: #fef7e0;
-  --ex: #f3e8fd;
+      --blue: #4285f4;
+      --red: #ea4335;
+      --yellow: #fbbc05;
+      --green: #34a853;
 
-  --shadow: 0 1px 3px rgba(60,64,67,0.15), 0 1px 2px rgba(60,64,67,0.1);
-  --radius: 12px;
-}
+      --blue-light: #e8f0fe;
+      --red-light: #fdecea;
+      --yellow-light: #fef7e0;
+      --green-light: #e6f4ea;
+
+      --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      --radius: 14px;
+    }
 
     * {
       box-sizing: border-box;
@@ -46,9 +50,15 @@
     }
 
     header {
-      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--red),
+        var(--yellow),
+        var(--green)
+      );
       color: white;
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 36px 28px;
       box-shadow: var(--shadow);
       margin-bottom: 28px;
@@ -61,7 +71,7 @@
 
     header p {
       margin: 0;
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     nav.toc {
@@ -76,6 +86,7 @@
     nav.toc h2 {
       margin-top: 0;
       font-size: 1.15rem;
+      color: var(--blue);
     }
 
     nav.toc ul {
@@ -88,8 +99,9 @@
     }
 
     nav.toc a {
-      color: var(--accent);
+      color: var(--blue);
       text-decoration: none;
+      font-weight: 600;
     }
 
     nav.toc a:hover {
@@ -108,8 +120,9 @@
     section h2 {
       margin-top: 0;
       padding-bottom: 10px;
-      border-bottom: 2px solid #e5e7eb;
+      border-bottom: 2px solid #ececec;
       font-size: 1.5rem;
+      color: var(--blue);
     }
 
     h3 {
@@ -126,23 +139,39 @@
     }
 
     .definition {
-      background: var(--def);
-      border-left: 6px solid #10b981;
+      background: var(--green-light);
+      border-left: 6px solid var(--green);
+    }
+
+    .definition .label {
+      color: var(--green);
     }
 
     .theorem {
-      background: var(--thm);
-      border-left: 6px solid #3b82f6;
+      background: var(--blue-light);
+      border-left: 6px solid var(--blue);
+    }
+
+    .theorem .label {
+      color: var(--blue);
     }
 
     .example {
-      background: var(--ex);
-      border-left: 6px solid #8b5cf6;
+      background: var(--red-light);
+      border-left: 6px solid var(--red);
+    }
+
+    .example .label {
+      color: var(--red);
     }
 
     .note {
-      background: #f9fafb;
-      border-left: 6px solid #6b7280;
+      background: #fff8db;
+      border-left: 6px solid var(--yellow);
+    }
+
+    .note .label {
+      color: #b7791f;
     }
 
     .label {
@@ -153,9 +182,9 @@
 
     details.proof {
       margin: 16px 0;
-      border: 1px solid #fed7aa;
+      border: 1px solid #fde293;
       border-radius: 14px;
-      background: var(--pf);
+      background: var(--yellow-light);
       overflow: hidden;
     }
 
@@ -166,6 +195,7 @@
       font-weight: 700;
       user-select: none;
       position: relative;
+      color: #b7791f;
     }
 
     details.proof summary::-webkit-details-marker {
@@ -179,6 +209,7 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 1.1rem;
+      color: #b7791f;
     }
 
     details.proof[open] summary::after {
@@ -187,7 +218,7 @@
 
     .proof-content {
       padding: 0 16px 16px;
-      border-top: 1px solid #fdba74;
+      border-top: 1px solid #f6d365;
     }
 
     .math-block {
@@ -196,7 +227,7 @@
     }
 
     code.inline {
-      background: #eef2ff;
+      background: #e8f0fe;
       padding: 2px 7px;
       border-radius: 8px;
       font-size: 0.95em;
@@ -210,8 +241,8 @@
     }
 
     .template-tip {
-      background: #eff6ff;
-      border: 1px dashed #60a5fa;
+      background: var(--blue-light);
+      border: 1px dashed var(--blue);
       border-radius: 14px;
       padding: 14px 16px;
       margin-top: 18px;
@@ -219,7 +250,7 @@
 
     @media (max-width: 700px) {
       header, section, nav.toc {
-        border-radius: 18px;
+        border-radius: 16px;
       }
 
       section {
@@ -373,7 +404,7 @@
         下の部分をコピペして、中身だけ差し替えれば新しい定理をどんどん追加できます。
       </p>
 
-      <pre style="white-space: pre-wrap; background:#111827; color:#f9fafb; padding:16px; border-radius:14px; overflow-x:auto;"><code>&lt;div class="box definition"&gt;
+      <pre style="white-space: pre-wrap; background:#202124; color:#f8f9fa; padding:16px; border-radius:14px; overflow-x:auto;"><code>&lt;div class="box definition"&gt;
   &lt;div class="label"&gt;定義&lt;/div&gt;
   &lt;p&gt;ここに定義を書く。&lt;/p&gt;
 &lt;/div&gt;
