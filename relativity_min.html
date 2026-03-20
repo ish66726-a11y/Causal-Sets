@@ -1,1 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数学学習ノート</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e0e0e0;
+
+      --red: #ea4335;
+
+      --blue: #4285f4;
+      --blue-light: #e8f0fe;
+
+      --green: #34a853;
+      --green-light: #e6f4ea;
+
+      --yellow: #fbbc05;
+      --yellow-light: #fff8db;
+
+      --shadow: 0 2px 6px rgba(0,0,0,0.08);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    .container {
+      width: min(1080px, 92%);
+      margin: 0 auto;
+      padding: 32px 0 64px;
+    }
+
+    /* 🔴 ヘッダー */
+    header {
+      background: var(--red);
+      color: white;
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+    }
+
+    /* 目次 */
+    nav.toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    nav.toc h2 { color: var(--blue); }
+
+    nav.toc a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    /* セクション */
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      color: var(--blue);
+      border-bottom: 2px solid #ececec;
+    }
+
+    .box {
+      border-radius: 14px;
+      padding: 16px;
+      margin: 16px 0;
+      border: 1px solid var(--line);
+    }
+
+    /* 🟢 定義 */
+    .definition {
+      background: var(--green-light);
+      border-left: 6px solid var(--green);
+    }
+
+    .definition .label { color: var(--green); }
+
+    /* 🔵 定理・命題・系・補題 */
+    .theorem,
+    .proposition,
+    .corollary,
+    .lemma {
+      background: var(--blue-light);
+      border-left: 6px solid var(--blue);
+    }
+
+    .theorem .label,
+    .proposition .label,
+    .corollary .label,
+    .lemma .label {
+      color: var(--blue);
+    }
+
+    /* 🟡 証明 */
+    details.proof {
+      border: 1px solid var(--yellow);
+      background: var(--yellow-light);
+      border-radius: 14px;
+      margin: 16px 0;
+    }
+
+    details.proof summary {
+      padding: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #b7791f;
+      position: relative;
+    }
+
+    details.proof summary::after {
+      content: "＋";
+      position: absolute;
+      right: 16px;
+    }
+
+    details.proof[open] summary::after {
+      content: "－";
+    }
+
+    .proof-content {
+      padding: 16px;
+      border-top: 1px solid var(--yellow);
+    }
+
+    /* 🟡 例 */
+    .example {
+      background: var(--yellow-light);
+      border-left: 6px solid var(--yellow);
+    }
+
+    .example .label { color: #b7791f; }
+
+    /* 🟡 メモ */
+    .note {
+      background: var(--yellow-light);
+      border-left: 6px solid var(--yellow);
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 32px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>数学学習ノート</h1>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ul>
+　　<li><a href="#spacetime">時空の概念（ローレンツ多様体・計量テンソル・ベクトルの因果的分類）</a></li>
+  </ul>
+</nav>
+
+
+</section>
+
+<section id="spacetime">
+
+  <h2>時空の概念（ローレンツ多様体・計量テンソル・ベクトルの因果的分類）</h2>
+
+  <div class="box definition">
+    <div class="label">定義</div>
+    <p><strong>時空</strong>とは，4次元の滑らかな多様体 \(M\) にローレンツ計量 \(g\) が入った組 \((M,g)\) のことである。</p>
+    <p>ここで，<strong>ローレンツ計量</strong>とは，各点 \(p\in M\) において接空間 \(T_pM\) 上の対称な非退化2次形式であり，適当な基底をとると成分が</p>
+    <p>\[
+    \mathrm{diag}(-1,+1,+1,+1)
+    \]</p>
+    <p>の形に書けるものをいう。</p>
+    <p>この符号の違いによって，時間方向と空間方向が区別される。</p>
+  </div>
+
+  <div class="box definition">
+    <div class="label">定義</div>
+    <p><strong>計量テンソル</strong> \(g\) は，各点で2つの接ベクトル \(u,v\in T_pM\) に対して実数 \(g(u,v)\) を対応させる \((0,2)\) 型テンソルである。</p>
+    <p>特に</p>
+    <p>\[
+    g(v,v)
+    \]</p>
+    <p>はベクトル \(v\) の「長さの2乗」に対応する量であり，ローレンツ幾何ではこの値の符号が重要になる。</p>
+  </div>
+
+  <div class="box definition">
+    <div class="label">定義</div>
+    <p>ローレンツ多様体 \((M,g)\) のある点 \(p\in M\) におけるベクトル \(v\in T_pM\) は，\(g(v,v)\) の符号によって次のように分類される。</p>
+    <p>
+      ・<strong>時間的ベクトル</strong>：\(\;g(v,v)&lt;0\)<br>
+      ・<strong>光的ベクトル</strong>（ヌルベクトル）：\(\;g(v,v)=0,\;v\neq 0\)<br>
+      ・<strong>空間的ベクトル</strong>：\(\;g(v,v)&gt;0\)
+    </p>
+    <p>光的ベクトル全体は各点で光円錐をつくり，その内側が時間的方向，外側が空間的方向になる。</p>
+  </div>
+
+  <div class="box remark">
+    <div class="label">解説</div>
+    <p>ユークリッド空間ではベクトルの長さの2乗は常に正であるが，時空ではローレンツ計量の符号のため，長さの2乗が負・零・正の3種類に分かれる。</p>
+    <p>このことによって，時空には単なる「距離」の幾何ではなく，<strong>時間と空間を区別する構造</strong>が入る。</p>
+    <p>また，物理的には，</p>
+    <p>
+      ・時間的ベクトル：質量をもつ粒子の運動方向<br>
+      ・光的ベクトル：光の進む方向<br>
+      ・空間的ベクトル：物理的な信号や粒子の運動方向にはなれない方向
+    </p>
+    <p>と理解できる。</p>
+  </div>
+
+  <div class="box example">
+    <div class="label">例</div>
+    <p><strong>ミンコフスキー時空</strong></p>
+    <p>特殊相対論における最も基本的な時空であり，</p>
+    <p>\[
+    M=\mathbb{R}^4
+    \]</p>
+    <p>の上に</p>
+    <p>\[
+    ds^2=-dt^2+dx^2+dy^2+dz^2
+    \]</p>
+    <p>という計量を入れたものである。</p>
+    <p>この時空は平坦であり，重力が存在しない理想化された時空を表す。</p>
+    <p>ベクトル \(v=(v^t,v^x,v^y,v^z)\) に対して，</p>
+    <p>\[
+    g(v,v)=-(v^t)^2+(v^x)^2+(v^y)^2+(v^z)^2
+    \]</p>
+    <p>となるので，この値の符号によって時間的・光的・空間的が決まる。</p>
+  </div>
+
+  <div class="box example">
+    <div class="label">例</div>
+    <p><strong>シュワルツシルト時空</strong></p>
+    <p>球対称な質量のまわりの真空時空を表す代表的な解であり，座標 \((t,r,\theta,\phi)\) を用いると計量は</p>
+    <p>\[
+    ds^2=
+    -\left(1-\frac{2M}{r}\right)dt^2
+    +\left(1-\frac{2M}{r}\right)^{-1}dr^2
+    +r^2(d\theta^2+\sin^2\theta\, d\phi^2)
+    \]</p>
+    <p>で与えられる。</p>
+    <p>ここで \(M\) は中心天体の質量に対応する定数である。</p>
+    <p>この時空は，重力によって時空が曲がっている典型例であり，平坦なミンコフスキー時空とは異なり，計量成分が位置 \(r\) に依存する。</p>
+    <p>特に \(r=2M\) は重要な半径であり，事象の地平面として現れる。</p>
+  </div>
+
+  <div class="box remark">
+    <div class="label">まとめ</div>
+    <p>時空は，単なる4次元空間ではなく，ローレンツ計量をもつ4次元多様体として定式化される。</p>
+    <p>計量テンソル \(g\) によって，各点の接ベクトルに対して</p>
+    <p>\[
+    g(v,v)
+    \]</p>
+    <p>が定まり，その符号によってベクトルは時間的・光的・空間的に分類される。</p>
+    <p>この分類が，時空における運動可能な方向，光の進行方向，そして時間と空間の区別を与える基本構造となる。</p>
+  </div>
+
+</section>
+
+  
+</div>
+</body>
+</html>
