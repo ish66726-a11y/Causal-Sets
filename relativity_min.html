@@ -415,26 +415,53 @@ details.example summary {
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
-    <span class="title">曲線の因果分類</span>
+    <span class="title">時間的曲線</span>
   </div>
-  <p>\((M,g)\) をローレンツ多様体とする。曲線 \(\gamma\) が次を満たすとき：</p>
-  <ul>
-    <li>各点で接ベクトル \(\dot{\gamma}\) が時間的であるとき、
-    \(\gamma\) を時間的曲線（timelike curve）という。</li>
-    <li>各点で接ベクトル \(\dot{\gamma}\) が時間的または光的であるとき、
-    \(\gamma\) を因果曲線（causal curve）という。</li>
-  </ul>
+  <p>曲線 \(\gamma : I \to M\) を \(C^1\) 級曲線とする。</p>
+  <p>任意の \(\lambda \in I\) に対して</p>
+  <p>\[
+  g\bigl(\dot{\gamma}(\lambda),\dot{\gamma}(\lambda)\bigr) < 0
+  \]</p>
+  <p>が成り立つとき、\(\gamma\) を時間的曲線という。</p>
 </div>
-
 <!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
-    <span class="title">未来向き曲線</span>
+    <span class="title">因果曲線</span>
   </div>
-  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とする。</p>
-  <p>曲線 \(\gamma\) が各点でその接ベクトル \(\dot{\gamma}\) が未来向き時間的（または因果的）であるとき、
-  \(\gamma\) を未来向き曲線（future-directed curve）という。</p>
+  <p>曲線 \(\gamma : I \to M\) を \(C^1\) 級曲線とする。</p>
+  <p>任意の \(\lambda \in I\) に対して</p>
+  <p>\[
+  \dot{\gamma}(\lambda) \neq 0,\quad g\bigl(\dot{\gamma}(\lambda),\dot{\gamma}(\lambda)\bigr) \leq 0
+  \]</p>
+  <p>が成り立つとき、\(\gamma\) を因果曲線という。</p>
+</div>
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">未来向き時間的曲線</span>
+  </div>
+  <p>時間向き付けられた時空 \((M,g)\) を考える。</p>
+  <p>曲線 \(\gamma : I \to M\) が未来向き時間的曲線であるとは、任意の \(\lambda \in I\) に対して</p>
+  <p>\[
+  \dot{\gamma}(\lambda)\ \text{は未来向き時間的}
+  \]</p>
+  <p>であることをいう。</p>
+</div>
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">未来向き因果曲線</span>
+  </div>
+  <p>時間向き付けられた時空 \((M,g)\) を考える。</p>
+  <p>曲線 \(\gamma : I \to M\) が未来向き因果曲線であるとは、任意の \(\lambda \in I\) に対して</p>
+  <p>\[
+  \dot{\gamma}(\lambda)\neq 0,\quad g\bigl(\dot{\gamma}(\lambda),\dot{\gamma}(\lambda)\bigr)\leq 0,\quad \dot{\gamma}(\lambda)\ \text{は未来向き}
+  \]</p>
+  <p>が成り立つことをいう。</p>
 </div>
 
 
@@ -446,19 +473,35 @@ details.example summary {
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
-    <span class="title">時間的先行関係と因果的先行関係</span>
+    <span class="title">時間的先行関係</span>
   </div>
-  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし、\(p,q \in M\) とする。</p>
-  <p>\(p\) から \(q\) へ未来向き時間的曲線が存在するとき、\(p\) は \(q\) に <strong>時間的に先行する</strong>といい、</p>
+  <p>点 \(p,q \in M\) に対して、\(p\) から \(q\) へ未来向き時間的曲線が存在するとき、\(p\) は \(q\) に時間的に先行するといい、</p>
   <p>\[
   p \ll q
   \]</p>
   <p>と書く。</p>
-  <p>また、\(p\) から \(q\) へ未来向き因果曲線が存在するとき、\(p\) は \(q\) に <strong>因果的に先行する</strong>といい、</p>
+  <p>すなわち</p>
+  <p>\[
+  p \ll q \iff \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=p,\ \gamma(b)=q,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き時間的}
+  \]</p>
+  <p>である。</p>
+</div>
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">因果的先行関係</span>
+  </div>
+  <p>点 \(p,q \in M\) に対して、\(p\) から \(q\) へ未来向き因果曲線が存在するとき、\(p\) は \(q\) に因果的に先行するといい、</p>
   <p>\[
   p \leq q
   \]</p>
   <p>と書く。</p>
+  <p>すなわち</p>
+  <p>\[
+  p \leq q \iff \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=p,\ \gamma(b)=q,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き因果的}
+  \]</p>
+  <p>である。</p>
 </div>
 
 <!-- 命題・証明 -->
@@ -578,38 +621,69 @@ details.example summary {
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
-    <span class="title">時間的未来と因果的未来</span>
+    <span class="title">時間的未来</span>
   </div>
-  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的未来と因果的未来をそれぞれ</p>
+  <p>点 \(p \in M\) に対して、その時間的未来 \(I^+(p)\) を</p>
   <p>\[
-  I^+(p), \qquad J^+(p)
+  I^+(p)=\{\, q\in M \mid p\ll q \,\}
   \]</p>
-  <p>と書き、</p>
+  <p>により定める。</p>
+  <p>すなわち</p>
   <p>\[
-  I^+(p)=\{\, q \in M : p \ll q \,\},
-  \qquad
-  J^+(p)=\{\, q \in M : p \leq q \,\}
+  I^+(p)=\{\, q\in M \mid \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=p,\ \gamma(b)=q,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き時間的} \,\}
   \]</p>
-  <p>によって定義する。</p>
+  <p>である。</p>
 </div>
-
 <!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
-    <span class="title">時間的過去と因果的過去</span>
+    <span class="title">因果的未来</span>
   </div>
-  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的過去と因果的過去をそれぞれ</p>
+  <p>点 \(p \in M\) に対して、その因果的未来 \(J^+(p)\) を</p>
   <p>\[
-  I^-(p), \qquad J^-(p)
+  J^+(p)=\{\, q\in M \mid p\leq q \,\}
   \]</p>
-  <p>と書き、</p>
+  <p>により定める。</p>
+  <p>すなわち</p>
   <p>\[
-  I^-(p)=\{\, q \in M : q \ll p \,\},
-  \qquad
-  J^-(p)=\{\, q \in M : q \leq p \,\}
+  J^+(p)=\{\, q\in M \mid \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=p,\ \gamma(b)=q,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き因果的} \,\}
   \]</p>
-  <p>によって定義する。</p>
+  <p>である。</p>
+</div>
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的過去</span>
+  </div>
+  <p>点 \(p \in M\) に対して、その時間的過去 \(I^-(p)\) を</p>
+  <p>\[
+  I^-(p)=\{\, q\in M \mid q\ll p \,\}
+  \]</p>
+  <p>により定める。</p>
+  <p>すなわち</p>
+  <p>\[
+  I^-(p)=\{\, q\in M \mid \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=q,\ \gamma(b)=p,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き時間的} \,\}
+  \]</p>
+  <p>である。</p>
+</div>
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">因果的過去</span>
+  </div>
+  <p>点 \(p \in M\) に対して、その因果的過去 \(J^-(p)\) を</p>
+  <p>\[
+  J^-(p)=\{\, q\in M \mid q\leq p \,\}
+  \]</p>
+  <p>により定める。</p>
+  <p>すなわち</p>
+  <p>\[
+  J^-(p)=\{\, q\in M \mid \exists \gamma:[a,b]\to M\ \text{s.t.}\ \gamma(a)=q,\ \gamma(b)=p,\ \forall \lambda\in[a,b],\ \dot{\gamma}(\lambda)\ \text{は未来向き因果的} \,\}
+  \]</p>
+  <p>である。</p>
 </div>
 
 <!-- 命題・証明 -->
