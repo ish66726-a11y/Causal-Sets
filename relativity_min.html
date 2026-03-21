@@ -162,11 +162,11 @@ details.example summary {
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">多様体</span>
-  </div> <p>位相空間 \(M\) が次の条件を満たすとき，\(M\) を <strong>\(n\) 次元滑らかな多様体</strong>という：</p>
-  <ol> <li>\(M\) はハウスドルフかつ第2可算である．</li> <li>\(M\) は開集合族 \(\{O_\alpha\}_{\alpha\in A}\) によって被覆される：</li> </ol> 
-  <p>\[ M = \bigcup_{\alpha\in A} O_\alpha \]</p> <ol start="3"> <li>各 \(O_\alpha\) に対して，同相写像（座標写像）</li> </ol>
-  <p>\[ \varphi_\alpha : O_\alpha \to U_\alpha \subset \mathbb{R}^n \]</p> <p>が存在し，\(U_\alpha\) は \(\mathbb{R}^n\) の開集合である．</p> <ol start="4"> <li>重なり部分における遷移写像</li> </ol>
-  <p>\[ \varphi_\alpha \circ \varphi_\beta^{-1} \]</p> <p>は滑らか（\(C^\infty\)）である．</p> </div>
+  </div> <p>位相空間 \(M\) が次の条件を満たすとき、\(M\) を <strong>\(n\) 次元滑らかな多様体</strong>という。：</p>
+  <ol> <li>\(M\) はハウスドルフかつ第2可算である。</li> <li>\(M\) は開集合族 \(\{O_\alpha\}_{\alpha\in A}\) によって被覆される：</li> </ol> 
+  <p>\[ M = \bigcup_{\alpha\in A} O_\alpha \]</p> <ol start="3"> <li>各 \(O_\alpha\) に対して、同相写像（座標写像）</li> </ol>
+  <p>\[ \varphi_\alpha : O_\alpha \to U_\alpha \subset \mathbb{R}^n \]</p> <p>が存在し、\(U_\alpha\) は \(\mathbb{R}^n\) の開集合である。</p> <ol start="4"> <li>重なり部分における遷移写像</li> </ol>
+  <p>\[ \varphi_\alpha \circ \varphi_\beta^{-1} \]</p> <p>は滑らか（\(C^\infty\)）である。</p> </div>
 
 <!-- 定義 -->
 <div class="box definition">
@@ -174,11 +174,11 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">接ベクトル</span>
   </div>
-<p>\(M\) を滑らかな多様体，\(p \in M\) を点とする．</p> <p>滑らかな関数全体の集合を</p> 
-  <p>\[ C^\infty(M) := \{f : M \to \mathbb{R} \mid f \text{ は滑らか}\} \]</p> <p>とする．</p> 
-  <p>写像 \(v : C^\infty(M) \to \mathbb{R}\) が次を満たすとき，\(v\) を点 \(p\) における <strong>接ベクトル</strong>という：</p> 
+<p>\(M\) を滑らかな多様体、\(p \in M\) を点とする．</p> <p>滑らかな関数全体の集合を</p> 
+  <p>\[ C^\infty(M) := \{f : M \to \mathbb{R} \mid f \text{ は滑らか}\} \]</p> <p>とする。</p> 
+  <p>写像 \(v : C^\infty(M) \to \mathbb{R}\) が次を満たすとき、\(v\) を点 \(p\) における <strong>接ベクトル</strong>という。：</p> 
   <ul> <li>線形性： \[ v(af + bg) = a v(f) + b v(g) \] </li> <li>Leibniz則： \[ v(fg) = f(p)\, v(g) + g(p)\, v(f) \] </li> </ul> 
-  <p>点 \(p\) における接ベクトル全体を \(T_pM\) と書き，これを <strong>接空間</strong>という．</p>
+  <p>点 \(p\) における接ベクトル全体を \(T_pM\) と書き、これを <strong>接空間</strong>という。</p>
 </div>
 
 
@@ -192,8 +192,8 @@ details.example summary {
   <p>\[
   X : M \to TM
   \]</p>
-  <p>が，各点 \(p \in M\) に対して \(X(p) \in T_pM\) を対応させ，
-  かつ滑らかであるとき，\(X\) を <strong>ベクトル場</strong>という．</p>
+  <p>が、各点 \(p \in M\) に対して \(X(p) \in T_pM\) を対応させ、
+  かつ滑らかであるとき、\(X\) を <strong>ベクトル場</strong>という。</p>
 </div>
 
   
@@ -203,8 +203,9 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">計量テンソル</span>
   </div>
-  <p>滑らかな多様体 \(M\) に対して，各点 \(p \in M\) において写像</p> <p>\[ g_p : T_pM \times T_pM \to \mathbb{R} \]</p> 
-  <p>が与えられており，次を満たすとき，\(g\) を <strong>計量テンソル</strong>という：</p> <ul> <li>双線形性</li> <li>対称性： \[ g_p(u,v) = g_p(v,u) \] </li>
+  <p>滑らかな多様体 \(M\) に対して、各点 \(p \in M\) において写像</p> <p>\[ g_p : T_pM \times T_pM \to \mathbb{R} \]</p> 
+  <p>が与えられており，次を満たすとき、\(g\) を <strong>計量テンソル</strong>という。：</p>
+  <ul> <li>双線形性</li> <li>対称性： \[ g_p(u,v) = g_p(v,u) \] </li>
   <li>非退化性： \[ g_p(u,w)=0 \ \forall w \in T_pM \Rightarrow u=0 \] </li> </ul>
 　</div>
 
@@ -214,9 +215,9 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">ローレンツ計量</span>
   </div>
-  <p>計量テンソル \(g\) が各点 \(p \in M\) において，ある基底を取ると</p> 
-  <p>\[ \mathrm{diag}(-1,+1,+1,+1) \]</p> <p>と同じ符号構造（符号数 \( (1, n-1) \) または \( (n-1,1) \)）をもつとき，\(g\) を <strong>ローレンツ計量</strong>という．</p> 
-  <p>このとき組 \((M,g)\) を <strong>ローレンツ多様体</strong>という．</p>
+  <p>計量テンソル \(g\) が各点 \(p \in M\) において、ある基底を取ると</p> 
+  <p>\[ \mathrm{diag}(-1,+1,+1,+1) \]</p> <p>と同じ符号構造（符号数 \( (1, n-1) \) または \( (n-1,1) \)）をもつとき，\(g\) を <strong>ローレンツ計量</strong>という。</p> 
+  <p>このとき組 \((M,g)\) を <strong>ローレンツ多様体</strong>という。</p>
 　</div>
   
 
@@ -230,7 +231,7 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">ベクトルの因果分類</span>
   </div>
-  <p>\((M,g)\) をローレンツ多様体とし，\(p \in M\)，\(v \in T_pM\) をベクトルとする．</p>
+  <p>ローレンツ多様体 \((M,g)\)において、\(p \in M\)，\(v \in T_pM\) をベクトルとする。</p>
   <ul><li><strong>時間的（timelike）</strong>：
       \[
       g(v,v) < 0
@@ -266,22 +267,22 @@ details.example summary {
     <span class="label">命題</span>
     <span class="title">因果分類の不変性</span>
   </div>
-  <p>ベクトルの因果分類（時間的・光的・空間的）は座標系の選び方に依らない．</p>
+  <p>ベクトルの因果分類（時間的・光的・空間的）は座標系の選び方に依らない。</p>
 </div>
 <details class="proof">
   <summary>証明</summary>
   <div class="proof-content">
-    <p>\(v \in T_pM\) を接ベクトルとする．ベクトルの因果分類は，計量による実数値</p>
+    <p>\(v \in T_pM\) を接ベクトルとする。ベクトルの因果分類は、計量による実数値</p>
     <p>\[
     g(v,v)
     \]</p>
-    <p>の符号によって定義されている．</p>
-    <p>いま，ある座標系で \(v\) の成分を \(v^\mu\)，計量の成分を \(g_{\mu\nu}\) とすると，</p>
+    <p>の符号によって定義されている。</p>
+    <p>いま、ある座標系で \(v\) の成分を \(v^\mu\)、計量の成分を \(g_{\mu\nu}\) とすると、</p>
     <p>\[
     g(v,v)=g_{\mu\nu}v^\mu v^\nu
     \]</p>
-    <p>である．</p>
-    <p>座標変換 \(x^\mu \mapsto x^{\mu'}\) を行うと，ベクトル成分と計量成分はそれぞれ</p>
+    <p>である。</p>
+    <p>座標変換 \(x^\mu \mapsto x^{\mu'}\) を行うと、ベクトル成分と計量成分はそれぞれ</p>
     <p>\[
     v^{\mu'}=\frac{\partial x^{\mu'}}{\partial x^\mu}v^\mu,
     \qquad
@@ -290,17 +291,17 @@ details.example summary {
     \frac{\partial x^\nu}{\partial x^{\nu'}}
     g_{\mu\nu}
     \]</p>
-    <p>と変換する．したがって，新しい座標系においても</p>
+    <p>と変換する。したがって、新しい座標系においても</p>
     <p>\[
     g_{\mu'\nu'}v^{\mu'}v^{\nu'}
     =
     g_{\mu\nu}v^\mu v^\nu
     \]</p>
-    <p>が成り立つ．すなわち，\(g(v,v)\) の値そのものは座標系によらない．</p>
+    <p>が成り立つ．すなわち，\(g(v,v)\) の値そのものは座標系によらない。</p>
     <p>よって，その符号
     \(g(v,v)&lt;0\)，\(g(v,v)=0\)，\(g(v,v)&gt;0\)
     も座標系によらず不変である．</p>
-    <p>したがって，ベクトルが時間的・光的・空間的のいずれであるかは座標系の選び方に依らない．</p>
+    <p>したがって、ベクトルが時間的・光的・空間的のいずれであるかは座標系の選び方に依らない。</p>
   </div>
 </details>
   
@@ -314,11 +315,10 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">時間向き付け可能性</span>
   </div>
-  <p>\((M,g)\) をローレンツ多様体とする．</p>
-  <p>各点 \(p \in M\) において時間的ベクトルであるようなベクトル場 \(X\) を
-  <strong>時間的ベクトル場</strong>という．</p>
-  <p>このとき，連続な時間的ベクトル場 \(X\) が全体で存在するとき，
-  \(M\) は <strong>時間向き付け可能</strong>という．</p>
+  <p>ローレンツ多様体 \((M,g)\)において、各点 \(p \in M\) において時間的ベクトルであるようなベクトル場 \(X\) を
+  <strong>時間的ベクトル場</strong>という。</p>
+  <p>このとき，連続な時間的ベクトル場 \(X\) が全体で存在するとき、
+  \(M\) は <strong>時間向き付け可能</strong>という。</p>
 </div>
 
   
@@ -329,9 +329,9 @@ details.example summary {
     <span class="label">定義</span>
     <span class="title">時空</span>
   </div>
-  <p>ローレンツ多様体 \((M,g)\) が <strong>時間向き付け可能</strong>であり，
-  全体で一貫した時間方向（future / past）が選べるとき，
-  \((M,g)\) を <strong>時空</strong>という．</p>
+  <p>ローレンツ多様体 \((M,g)\) が <strong>時間向き付け可能</strong>であり、
+  全体で一貫した時間方向（future / past）が選べるとき、
+  \((M,g)\) を <strong>時空</strong>という。</p>
 </div>
 
 
@@ -349,10 +349,10 @@ details.example summary {
   <p>\[
   X = \frac{\partial}{\partial t}
   \]</p>
-  <p>は各点で時間的ベクトルであり，かつ連続である．</p>
-  <p>したがってこのローレンツ多様体は時間向き付け可能である．</p>
-  <p>このベクトル場を用いて，未来向き（future-directed）と過去向き（past-directed）を
-  一貫して定めることができるため，\((\mathbb{R}^4, g)\) は時空である．</p>
+  <p>は各点で時間的ベクトルであり、かつ連続である。</p>
+  <p>したがってこのローレンツ多様体は時間向き付け可能である。</p>
+  <p>このベクトル場を用いて、未来向き（future-directed）と過去向き（past-directed）を
+  一貫して定めることができるため、\((\mathbb{R}^4, g)\) は時空である。</p>
   </div>
 </details>
 
@@ -360,22 +360,21 @@ details.example summary {
 <details class="example">
   <summary>例：時間向き付け不可能な例</summary>
   <div style="padding:16px;">
-  <p>次のようにして得られるローレンツ多様体を考える．</p>
-  <p>\(\mathbb{R}^2\) に座標 \((t,x)\) を入れ，計量</p>
+  <p>次のようにして得られるローレンツ多様体を考える。</p>
+  <p>\(\mathbb{R}^2\) に座標 \((t,x)\) を入れ、計量</p>
   <p>\[
   g = -dt^2 + dx^2
   \]</p>
-  <p>を入れる．これは2次元ミンコフスキー時空である．</p>
+  <p>を入れる。これは2次元ミンコフスキー時空である。</p>
   <p>ここで同値関係</p>
   <p>\[
   (t,x) \sim (-t, x+1)
   \]</p>
-  <p>によって商空間 \(M\) を作る．</p>
-  <p>このとき，空間方向に一周すると時間座標の符号が反転するため，
-  連続な時間的ベクトル場を全体で定めることができない．</p>
-  <p>実際，ある点で未来向きに選んだベクトルは，
-  一周して戻ると過去向きに変わってしまう．</p>
-  <p>したがってこのローレンツ多様体は時間向き付け可能ではない．</p>
+  <p>によって商空間 \(M\) を作る。</p>
+  <p>このとき、空間方向に一周すると時間座標の符号が反転するため、連続な時間的ベクトル場を全体で定めることができない。</p>
+  <p>実際、ある点で未来向きに選んだベクトルは、
+  一周して戻ると過去向きに変わってしまう。</p>
+  <p>したがってこのローレンツ多様体は時間向き付け可能ではない。</p>
   </div>
 </details>
   
