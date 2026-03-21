@@ -150,8 +150,8 @@ details.example summary {
 <li><a href="#vector_classify">2.ベクトルの因果分類</a></li>
 <li><a href="#spacetime">3.時空</a></li>
 <li><a href="#curve_classify">4.曲線と因果性</a></li>
-<li><a href="#causality">5.因果関係の定義</a></li>
-<li><a href="#prop_causality">6.因果関係の命題</a></li>
+<li><a href="#causal_relation">5.因果的先行関係</a></li>
+<li><a href="#causality">6.時空の因果構造</a></li>
 
 
 
@@ -437,7 +437,7 @@ details.example summary {
 
 
 <!-- 飛び先 --><!-- 節タイトル -->
-<h1 id="causality">5.因果関係の定義</h1>
+<h1 id="causal_relation">5.因果的先行関係</h1>
 
 <!-- 定義 -->
 <div class="box definition">
@@ -458,73 +458,6 @@ details.example summary {
   <p>と書く。</p>
 </div>
 
-<!-- 定義 -->
-<div class="box definition">
-  <div class="box-header">
-    <span class="label">定義</span>
-    <span class="title">時間的未来と因果的未来</span>
-  </div>
-  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的未来と因果的未来をそれぞれ</p>
-  <p>\[
-  I^+(p), \qquad J^+(p)
-  \]</p>
-  <p>と書き、</p>
-  <p>\[
-  I^+(p)=\{\, q \in M : p \ll q \,\},
-  \qquad
-  J^+(p)=\{\, q \in M : p \leq q \,\}
-  \]</p>
-  <p>によって定義する。</p>
-</div>
-
-<!-- 定義 -->
-<div class="box definition">
-  <div class="box-header">
-    <span class="label">定義</span>
-    <span class="title">時間的過去と因果的過去</span>
-  </div>
-  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的過去と因果的過去をそれぞれ</p>
-  <p>\[
-  I^-(p), \qquad J^-(p)
-  \]</p>
-  <p>と書き、</p>
-  <p>\[
-  I^-(p)=\{\, q \in M : q \ll p \,\},
-  \qquad
-  J^-(p)=\{\, q \in M : q \leq p \,\}
-  \]</p>
-  <p>によって定義する。</p>
-</div>
-
-  
-<!-- 飛び先 --><!-- 節タイトル -->
-<h1 id="prop_causality">6.因果関係の命題</h1>
-
-<!-- 命題・証明 -->
-<div class="box proposition">
-  <div class="box-header">
-    <span class="label">命題</span>
-    <span class="title">包含関係</span>
-  </div>
-  <p>任意の点 \(p \in M\) に対して、</p>
-  <p>\[
-  I^+(p) \subset J^+(p),
-  \qquad
-  I^-(p) \subset J^-(p)
-  \]</p>
-  <p>が成り立つ。</p>
-</div>
-<details class="proof">
-  <summary>証明</summary>
-  <div class="proof-content">
-  <p>\(q \in I^+(p)\) とする。</p>
-  <p>このとき、\(p\) から \(q\) へ未来向き時間的曲線が存在する。</p>
-  <p>時間的曲線は因果曲線でもあるから、\(p\) から \(q\) へ未来向き因果曲線が存在する。</p>
-  <p>したがって、\(q \in J^+(p)\) である。</p>
-  <p>ゆえに、\(I^+(p) \subset J^+(p)\) が成り立つ。</p>
-  </div>
-</details>
-  
 <!-- 命題・証明 -->
 <div class="box proposition">
   <div class="box-header">
@@ -631,6 +564,76 @@ details.example summary {
   時間的曲線は存在しないため，逆は成り立たない。</p>
   </div>
 </details>
+
+  
+  
+<!-- 飛び先 --><!-- 節タイトル -->
+<h1 id="causality">6.時空の因果構造</h1>
+
+
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的未来と因果的未来</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的未来と因果的未来をそれぞれ</p>
+  <p>\[
+  I^+(p), \qquad J^+(p)
+  \]</p>
+  <p>と書き、</p>
+  <p>\[
+  I^+(p)=\{\, q \in M : p \ll q \,\},
+  \qquad
+  J^+(p)=\{\, q \in M : p \leq q \,\}
+  \]</p>
+  <p>によって定義する。</p>
+</div>
+
+<!-- 定義 -->
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的過去と因果的過去</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的過去と因果的過去をそれぞれ</p>
+  <p>\[
+  I^-(p), \qquad J^-(p)
+  \]</p>
+  <p>と書き、</p>
+  <p>\[
+  I^-(p)=\{\, q \in M : q \ll p \,\},
+  \qquad
+  J^-(p)=\{\, q \in M : q \leq p \,\}
+  \]</p>
+  <p>によって定義する。</p>
+</div>
+
+<!-- 命題・証明 -->
+<div class="box proposition">
+  <div class="box-header">
+    <span class="label">命題</span>
+    <span class="title">包含関係</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して、</p>
+  <p>\[
+  I^+(p) \subset J^+(p),
+  \qquad
+  I^-(p) \subset J^-(p)
+  \]</p>
+  <p>が成り立つ。</p>
+</div>
+<details class="proof">
+  <summary>証明</summary>
+  <div class="proof-content">
+  <p>\(q \in I^+(p)\) とする。</p>
+  <p>このとき、\(p\) から \(q\) へ未来向き時間的曲線が存在する。</p>
+  <p>時間的曲線は因果曲線でもあるから、\(p\) から \(q\) へ未来向き因果曲線が存在する。</p>
+  <p>したがって、\(q \in J^+(p)\) である。</p>
+  <p>ゆえに、\(I^+(p) \subset J^+(p)\) が成り立つ。</p>
+  </div>
+</details>
+  
 
 <!-- 命題・証明 -->
 <div class="box proposition">
