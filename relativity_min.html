@@ -59,85 +59,137 @@ section h2 {
 /* 共通BOX */
 .box {
   border-radius: 14px;
-  padding: 18px;
-  margin: 18px 0;
-  border: 1px solid var(--line);
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  border: 1px solid #d7d7d7;
+  padding: 0;
+  background: white;
 }
 
-/* 🔥 見出し（ここが今回の本体） */
 .box-header {
   display: flex;
-  gap: 12px;
   align-items: baseline;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin: 0;
+  padding: 14px 18px;
+}
+
+.box-content {
+  padding: 16px 18px 18px;
 }
 
 .label {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 /* 定義 */
 .definition {
-  background: var(--blue-light);
-  border-left: 6px solid var(--blue);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  border: 1px solid #d7d7d7;
+  background: white;
 }
-.definition .label { color: var(--blue); }
+.definition .box-header {
+  background: var(--blue);
+  color: white;
+}
+.definition .box-content {
+  background: var(--blue-light);
+}
 
 /* 定理系 */
 .theorem,
 .proposition,
 .lemma,
 .corollary {
-  background: var(--yellow-light);
-  border-left: 6px solid var(--yellow);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  border: 1px solid #d7d7d7;
+  background: white;
 }
-.theorem .label,
-.proposition .label,
-.lemma .label,
-.corollary .label {
-  color: #b7791f;
+.theorem .box-header,
+.proposition .box-header,
+.lemma .box-header,
+.corollary .box-header {
+  background: var(--yellow);
+  color: #222;
+}
+.theorem .box-content,
+.proposition .box-content,
+.lemma .box-content,
+.corollary .box-content {
+  background: var(--yellow-light);
 }
 
-  
 /* 証明 */
 details.proof {
-  background: var(--cream);
   border-radius: 14px;
-  margin: 18px 0;
-  padding: 4px 0;              /* ←追加 */
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  border: 1px solid #d7d7d7;
+  background: white;
 }
 details.proof summary {
-  padding: 16px 22px;          /* ←横に余白追加 */
+  background: #c89b2d;
+  color: white;
+  padding: 16px 22px;
   cursor: pointer;
   font-weight: bold;
+}
+.proof-content {
+  padding: 16px 22px 22px;
+  background: var(--cream);
 }
 
 /* 例 */
 details.example {
-  background: var(--green-light);
   border-radius: 14px;
-  margin: 18px 0;
-  padding: 4px 0;              /* ←追加 */
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  border: 1px solid #d7d7d7;
+  background: white;
 }
 details.example summary {
-  padding: 16px 22px;          /* ←横に余白追加 */
+  background: var(--green);
+  color: white;
+  padding: 16px 22px;
   cursor: pointer;
   font-weight: bold;
-  color: var(--green);
+}
+.example-content {
+  padding: 16px 22px 22px;
+  background: var(--green-light);
 }
 
 /* まとめ */
 .summary-box {
-  background: var(--red-light);
-  border-left: 6px solid var(--red);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 22px 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  border: 1px solid #d7d7d7;
+  background: white;
 }
-.summary-box .label { color: var(--red); }
+.summary-box .box-header {
+  background: var(--red);
+  color: white;
+}
+.summary-box .box-content {
+  background: var(--red-light);
+}
 
 </style>
 </head>
@@ -145,6 +197,9 @@ details.example summary {
 <body>
 <div class="container">
 
+<!-- ここまでが環境設定 -->
+<!-- ここからが本文 -->
+  
 <!-- 章タイトル -->
 <h1>相対性理論における時空</h1> 
 
@@ -166,24 +221,25 @@ details.example summary {
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">多様体</span>
-  </div> <p>位相空間 \(M\) が次の条件を満たすとき、\(M\) を <strong>\(n\) 次元滑らかな多様体</strong>という：</p>
+  </div><div class="box-content">
+  <p>位相空間 \(M\) が次の条件を満たすとき、\(M\) を <strong>\(n\) 次元滑らかな多様体</strong>という：</p>
   <ol> <li>\(M\) はハウスドルフかつ第2可算である。</li> <li>\(M\) は開集合族 \(\{O_\alpha\}_{\alpha\in A}\) によって被覆される：</li> </ol> 
   <p>\[ M = \bigcup_{\alpha\in A} O_\alpha \]</p> <ol start="3"> <li>各 \(O_\alpha\) に対して、同相写像（座標写像）</li> </ol>
   <p>\[ \varphi_\alpha : O_\alpha \to U_\alpha \subset \mathbb{R}^n \]</p> <p>が存在し、\(U_\alpha\) は \(\mathbb{R}^n\) の開集合である。</p> <ol start="4"> <li>重なり部分における遷移写像</li> </ol>
-  <p>\[ \varphi_\alpha \circ \varphi_\beta^{-1} \]</p> <p>は滑らか（\(C^\infty\)）である。</p> </div>
+  <p>\[ \varphi_\alpha \circ \varphi_\beta^{-1} \]</p> <p>は滑らか（\(C^\infty\)）である。</p> </div></div>
 
 <!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">接ベクトル</span>
-  </div>
+  </div><div class="box-content">
 <p>\(M\) を滑らかな多様体、\(p \in M\) を点とする．</p> <p>滑らかな関数全体の集合を</p> 
   <p>\[ C^\infty(M) := \{f : M \to \mathbb{R} \mid f \text{ は滑らか}\} \]</p> <p>とする。</p> 
   <p>写像 \(v : C^\infty(M) \to \mathbb{R}\) が次を満たすとき、\(v\) を点 \(p\) における <strong>接ベクトル</strong>という：</p> 
   <ul> <li>線形性： \[ v(af + bg) = a v(f) + b v(g) \] </li> <li>Leibniz則： \[ v(fg) = f(p)\, v(g) + g(p)\, v(f) \] </li> </ul> 
   <p>点 \(p\) における接ベクトル全体を \(T_pM\) と書き、これを <strong>接空間</strong>という。</p>
-</div>
+</div></div>
 
 
 <!-- 定義 -->
@@ -191,14 +247,14 @@ details.example summary {
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">ベクトル場</span>
-  </div>
+  </div><div class="box-content">
   <p>滑らかな多様体 \(M\) 上の写像</p>
   <p>\[
   X : M \to TM
   \]</p>
   <p>が、各点 \(p \in M\) に対して \(X(p) \in T_pM\) を対応させ、
   かつ滑らかであるとき、\(X\) を <strong>ベクトル場</strong>という。</p>
-</div>
+</div></div>
 
   
 <!-- 定義 -->
@@ -206,23 +262,23 @@ details.example summary {
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">計量テンソル</span>
-  </div>
+  </div><div class="box-content">
   <p>滑らかな多様体 \(M\) に対して、各点 \(p \in M\) において写像</p> <p>\[ g_p : T_pM \times T_pM \to \mathbb{R} \]</p> 
   <p>が与えられており，次を満たすとき、\(g\) を <strong>計量テンソル</strong>という：</p>
   <ul> <li>双線形性</li> <li>対称性： \[ g_p(u,v) = g_p(v,u) \] </li>
   <li>非退化性： \[ g_p(u,w)=0 \ \forall w \in T_pM \Rightarrow u=0 \] </li> </ul>
-　</div>
+　</div></div>
 
 <!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">ローレンツ計量</span>
-  </div>
+  </div><div class="box-content">
   <p>計量テンソル \(g\) が各点 \(p \in M\) において、ある基底を取ると</p> 
   <p>\[ \mathrm{diag}(-1,+1,+1,+1) \]</p> <p>と同じ符号構造（符号数 \( (1, n-1) \) または \( (n-1,1) \)）をもつとき，\(g\) を <strong>ローレンツ計量</strong>という。</p> 
   <p>このとき組 \((M,g)\) を <strong>ローレンツ多様体</strong>という。</p>
-　</div>
+　</div></div>
   
 
 
