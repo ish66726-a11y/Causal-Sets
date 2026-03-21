@@ -258,6 +258,60 @@ details.example summary {
   </ul>
 </div>
 
+
+<!-- 命題 -->
+<div class="box proposition">
+  <div class="box-header">
+    <span class="label">命題</span>
+    <span class="title">因果分類の不変性</span>
+  </div>
+  <p>ベクトルの因果分類（時間的・光的・空間的）は座標系の選び方に依らない．</p>
+</div>
+
+<!-- 証明 -->
+<div class="box proposition">
+  <div class="box-header">
+    <span class="label">命題</span>
+    <span class="title">因果分類の不変性</span>
+  </div>
+  <p>ベクトルの因果分類（時間的・光的・空間的）は座標系の選び方に依らない．</p>
+</div>
+<details class="proof">
+  <summary>証明</summary>
+  <div class="proof-content">
+    <p>\(v \in T_pM\) を接ベクトルとする．ベクトルの因果分類は，計量による実数値</p>
+    <p>\[
+    g(v,v)
+    \]</p>
+    <p>の符号によって定義されている．</p>
+    <p>いま，ある座標系で \(v\) の成分を \(v^\mu\)，計量の成分を \(g_{\mu\nu}\) とすると，</p>
+    <p>\[
+    g(v,v)=g_{\mu\nu}v^\mu v^\nu
+    \]</p>
+    <p>である．</p>
+    <p>座標変換 \(x^\mu \mapsto x^{\mu'}\) を行うと，ベクトル成分と計量成分はそれぞれ</p>
+    <p>\[
+    v^{\mu'}=\frac{\partial x^{\mu'}}{\partial x^\mu}v^\mu,
+    \qquad
+    g_{\mu'\nu'}=
+    \frac{\partial x^\mu}{\partial x^{\mu'}}
+    \frac{\partial x^\nu}{\partial x^{\nu'}}
+    g_{\mu\nu}
+    \]</p>
+    <p>と変換する．したがって，新しい座標系においても</p>
+    <p>\[
+    g_{\mu'\nu'}v^{\mu'}v^{\nu'}
+    =
+    g_{\mu\nu}v^\mu v^\nu
+    \]</p>
+    <p>が成り立つ．すなわち，\(g(v,v)\) の値そのものは座標系によらない．</p>
+    <p>よって，その符号
+    \(g(v,v)&lt;0\)，\(g(v,v)=0\)，\(g(v,v)&gt;0\)
+    も座標系によらず不変である．</p>
+    <p>したがって，ベクトルが時間的・光的・空間的のいずれであるかは座標系の選び方に依らない．</p>
+  </div>
+</details>
+  
   
 <!-- 定義 -->
 <div class="box definition">
