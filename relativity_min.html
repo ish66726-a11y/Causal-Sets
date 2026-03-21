@@ -437,6 +437,109 @@ details.example summary {
 
 <!-- 飛び先 --><!-- 節タイトル -->
 <h1 id="causality">5.因果関係の定義</h1>
+
+
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的先行関係と因果的先行関係</span>
+  </div>
+  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし，\(p,q \in M\) とする。</p>
+  <p>\(p\) から \(q\) へ未来向き時間的曲線が存在するとき，\(p\) は \(q\) に <strong>時間的に先行する</strong>といい，</p>
+  <p>\[
+  p \ll q
+  \]</p>
+  <p>と書く。</p>
+  <p>また，\(p\) から \(q\) へ未来向き因果曲線が存在するとき，\(p\) は \(q\) に <strong>因果的に先行する</strong>といい，</p>
+  <p>\[
+  p \leq q
+  \]</p>
+  <p>と書く。</p>
+</div>
+
+
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的未来と因果的未来</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して，\(p\) の時間的未来と因果的未来をそれぞれ</p>
+  <p>\[
+  I^+(p), \qquad J^+(p)
+  \]</p>
+  <p>と書き，</p>
+  <p>\[
+  I^+(p)=\{\, q \in M : p \ll q \,\},
+  \qquad
+  J^+(p)=\{\, q \in M : p \leq q \,\}
+  \]</p>
+  <p>によって定義する。</p>
+</div>
+
+
+<div class="box definition">
+  <div class="box-header">
+    <span class="label">定義</span>
+    <span class="title">時間的過去と因果的過去</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して，\(p\) の時間的過去と因果的過去をそれぞれ</p>
+  <p>\[
+  I^-(p), \qquad J^-(p)
+  \]</p>
+  <p>と書き，</p>
+  <p>\[
+  I^-(p)=\{\, q \in M : q \ll p \,\},
+  \qquad
+  J^-(p)=\{\, q \in M : q \leq p \,\}
+  \]</p>
+  <p>によって定義する。</p>
+</div>
+
+
+<div class="box proposition">
+  <div class="box-header">
+    <span class="label">命題</span>
+    <span class="title">包含関係</span>
+  </div>
+  <p>任意の点 \(p \in M\) に対して，</p>
+  <p>\[
+  I^+(p) \subset J^+(p),
+  \qquad
+  I^-(p) \subset J^-(p)
+  \]</p>
+  <p>が成り立つ。</p>
+</div>
+
+
+<div class="box proposition">
+  <div class="box-header">
+    <span class="label">命題</span>
+    <span class="title">推移性</span>
+  </div>
+  <p>任意の点 \(p,q,r \in M\) に対して，</p>
+  <p>\[
+  p \ll q, \quad q \ll r
+  \]</p>
+  <p>ならば</p>
+  <p>\[
+  p \ll r
+  \]</p>
+  <p>が成り立つ。</p>
+  <p>また，</p>
+  <p>\[
+  p \ll q, \quad q \leq r
+  \]</p>
+  <p>あるいは</p>
+  <p>\[
+  p \leq q, \quad q \ll r
+  \]</p>
+  <p>ならば</p>
+  <p>\[
+  p \ll r
+  \]</p>
+  <p>が成り立つ。</p>
+</div>
+
   
 <!-- 定義 -->
 <div class="box definition">
