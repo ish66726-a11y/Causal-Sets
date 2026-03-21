@@ -438,36 +438,36 @@ details.example summary {
 <!-- 飛び先 --><!-- 節タイトル -->
 <h1 id="causality">5.因果関係の定義</h1>
 
-
+<!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">時間的先行関係と因果的先行関係</span>
   </div>
-  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし，\(p,q \in M\) とする。</p>
-  <p>\(p\) から \(q\) へ未来向き時間的曲線が存在するとき，\(p\) は \(q\) に <strong>時間的に先行する</strong>といい，</p>
+  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし、\(p,q \in M\) とする。</p>
+  <p>\(p\) から \(q\) へ未来向き時間的曲線が存在するとき、\(p\) は \(q\) に <strong>時間的に先行する</strong>といい、</p>
   <p>\[
   p \ll q
   \]</p>
   <p>と書く。</p>
-  <p>また，\(p\) から \(q\) へ未来向き因果曲線が存在するとき，\(p\) は \(q\) に <strong>因果的に先行する</strong>といい，</p>
+  <p>また、\(p\) から \(q\) へ未来向き因果曲線が存在するとき、\(p\) は \(q\) に <strong>因果的に先行する</strong>といい、</p>
   <p>\[
   p \leq q
   \]</p>
   <p>と書く。</p>
 </div>
 
-
+<!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">時間的未来と因果的未来</span>
   </div>
-  <p>任意の点 \(p \in M\) に対して，\(p\) の時間的未来と因果的未来をそれぞれ</p>
+  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的未来と因果的未来をそれぞれ</p>
   <p>\[
   I^+(p), \qquad J^+(p)
   \]</p>
-  <p>と書き，</p>
+  <p>と書き、</p>
   <p>\[
   I^+(p)=\{\, q \in M : p \ll q \,\},
   \qquad
@@ -476,17 +476,17 @@ details.example summary {
   <p>によって定義する。</p>
 </div>
 
-
+<!-- 定義 -->
 <div class="box definition">
   <div class="box-header">
     <span class="label">定義</span>
     <span class="title">時間的過去と因果的過去</span>
   </div>
-  <p>任意の点 \(p \in M\) に対して，\(p\) の時間的過去と因果的過去をそれぞれ</p>
+  <p>任意の点 \(p \in M\) に対して、\(p\) の時間的過去と因果的過去をそれぞれ</p>
   <p>\[
   I^-(p), \qquad J^-(p)
   \]</p>
-  <p>と書き，</p>
+  <p>と書き、</p>
   <p>\[
   I^-(p)=\{\, q \in M : q \ll p \,\},
   \qquad
@@ -495,13 +495,13 @@ details.example summary {
   <p>によって定義する。</p>
 </div>
 
-
+<!-- 命題・証明 -->
 <div class="box proposition">
   <div class="box-header">
     <span class="label">命題</span>
     <span class="title">包含関係</span>
   </div>
-  <p>任意の点 \(p \in M\) に対して，</p>
+  <p>任意の点 \(p \in M\) に対して、</p>
   <p>\[
   I^+(p) \subset J^+(p),
   \qquad
@@ -509,14 +509,24 @@ details.example summary {
   \]</p>
   <p>が成り立つ。</p>
 </div>
-
-
+<details class="proof">
+  <summary>証明</summary>
+  <div class="proof-content">
+  <p>\(q \in I^+(p)\) とする。</p>
+  <p>このとき、\(p\) から \(q\) へ未来向き時間的曲線が存在する。</p>
+  <p>時間的曲線は因果曲線でもあるから、\(p\) から \(q\) へ未来向き因果曲線が存在する。</p>
+  <p>したがって、\(q \in J^+(p)\) である。</p>
+  <p>ゆえに、\(I^+(p) \subset J^+(p)\) が成り立つ。</p>
+  </div>
+</details>
+  
+<!-- 命題・証明 -->
 <div class="box proposition">
   <div class="box-header">
     <span class="label">命題</span>
     <span class="title">推移性</span>
   </div>
-  <p>任意の点 \(p,q,r \in M\) に対して，</p>
+  <p>任意の点 \(p,q,r \in M\) に対して、</p>
   <p>\[
   p \ll q, \quad q \ll r
   \]</p>
@@ -525,7 +535,7 @@ details.example summary {
   p \ll r
   \]</p>
   <p>が成り立つ。</p>
-  <p>また，</p>
+  <p>また、</p>
   <p>\[
   p \ll q, \quad q \leq r
   \]</p>
@@ -539,94 +549,20 @@ details.example summary {
   \]</p>
   <p>が成り立つ。</p>
 </div>
-
-  
-<!-- 定義 -->
-<div class="box definition">
-  <div class="box-header">
-    <span class="label">定義</span>
-    <span class="title">時間的未来</span>
-  </div>
-  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし、\(p \in M\) を点とする。</p>
-  <p>点 \(q \in M\) が \(p\) の時間的未来に属するとは、
-  \(p\) から \(q\) へ向かう未来向き時間的曲線が存在することをいう。</p>
-  <p>このような点 \(q\) 全体の集合を</p>
-  <p>\[
-  I^+(p)
-  \]</p>
-  <p>と書き、これを点 \(p\) の時間的未来という。</p>
-</div>
-
-<!-- 定義 -->
-<div class="box definition">
-  <div class="box-header">
-    <span class="label">定義</span>
-    <span class="title">因果的未来</span>
-  </div>
-  <p>\((M,g)\) を時間向き付けられたローレンツ多様体とし、\(p \in M\) を点とする。</p>
-  <p>点 \(q \in M\) が \(p\) の因果的未来に属するとは、
-  \(p\) から \(q\) へ向かう未来向き因果曲線が存在することをいう。</p>
-  <p>このような点 \(q\) 全体の集合を</p>
-  <p>\[
-  J^+(p)
-  \]</p>
-  <p>と書き、これを点 \(p\) の因果的未来という。</p>
-</div>
-
-<!-- 定義 -->
-<div class="box definition">
-  <div class="box-header">
-    <span class="label">定義</span>
-    <span class="title">過去</span>
-  </div>
-  <p>点 \(p \in M\) に対して、その時間的過去および因果的過去をそれぞれ</p>
-  <p>\[
-  I^-(p), \quad J^-(p)
-  \]</p>
-  <p>と定める。</p>
-  <p>これはそれぞれ、\(p\) に向かう未来向き時間的曲線、
-  および未来向き因果曲線が存在する点の集合である。</p>
-</div>
-
-<!-- 命題 -->
-<div class="box proposition">
-  <div class="box-header">
-    <span class="label">命題</span>
-    <span class="title">包含関係</span>
-  </div>
-  <p>任意の点 \(p \in M\) に対して，</p>
-  <p>\[
-  I^+(p) \subset J^+(p)
-  \]</p>
-  <p>が成り立つ。</p>
-</div>
-
-
-<!-- 命題 --><!-- 証明 -->
-<div class="box proposition">
-  <div class="box-header">
-    <span class="label">命題</span>
-    <span class="title">推移性</span>
-  </div>
-  <p>任意の点 \(p,q,r \in M\) に対して，</p>
-  <p>\[
-  q \in I^+(p), \quad r \in I^+(q)
-  \]</p>
-  <p>ならば，</p>
-  <p>\[
-  r \in I^+(p)
-  \]</p>
-  <p>が成り立つ。</p>
-</div>
 <details class="proof">
   <summary>証明</summary>
   <div class="proof-content">
-  <p>\(q \in I^+(p)\) であるから，\(p\) から \(q\) への未来向き時間的曲線が存在する。</p>
-  <p>また，\(r \in I^+(q)\) であるから，\(q\) から \(r\) への未来向き時間的曲線が存在する。</p>
-  <p>これらを連結することにより，\(p\) から \(r\) への未来向き時間的曲線が得られる。</p>
-  <p>したがって，\(r \in I^+(p)\) である。</p>
+  <p>\(p \ll q\) かつ \(q \ll r\) とする。</p>
+  <p>このとき、\(p\) から \(q\) への未来向き時間的曲線と、
+  \(q\) から \(r\) への未来向き時間的曲線が存在する。</p>
+  <p>これらを連結することにより、\(p\) から \(r\) への未来向き時間的曲線が得られる。</p>
+  <p>したがって、\(p \ll r\) である。</p>
+  <p>他の場合も同様に、曲線の連結により従う。</p>
   </div>
 </details>
+  
+
+
 
   
 </section>
