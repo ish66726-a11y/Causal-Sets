@@ -192,12 +192,46 @@ details.example summary {
 }
 
 /* imgの大きさ調整 */
-.content-row .image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
+.content-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
+.content-row .text {
+  flex: 1;
+  min-width: 0;
+}
+
+.content-row .image {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.content-row .image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+  }
+
+  .content-row .image {
+    flex: none;
+    width: 100%;
+  }
+
+  .content-row .image img {
+    max-width: 300px;
+  }
+}
+
+  
   
 </style>
 </head>
